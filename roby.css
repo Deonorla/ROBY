@@ -1,0 +1,560 @@
+/*======= GOOGLE FONTS ========*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*======= VARIABLE CSS ========*/
+
+:root {
+    --header-height: 3rem;
+    /*======= FONT WEIGHT========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    /*======= COLORS ========*/
+    --dark-colour: #141414;
+    --dark-color-light: #8A8A8A;
+    --dark-color-lighten: #F2F2F2;
+    --white-color: #FFFFFF;
+    /*======= FONTS AND TOPOGRAPHY ========*/
+    --body-font: 'Poppins', san-serif;
+    --big-font-size: 1.25rem;
+    --bigger-font-size: 1.5rem;
+    --biggest-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .81rem;
+    /*======= MARGINS ========*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /*======= Z - INDEX ========*/
+    --z-fixed: 100;
+    /*======= ROTATE IMG ========*/
+    --rotate-img: rotate(-30deg);
+}
+
+@media screen and (min-width: 768px) {
+     :root {
+        --big-font-size: 1.5rem;
+        --bigger-font-size: 2rem;
+        --biggest-font-size: 3rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: .875rem;
+    }
+}
+
+
+/*======= BASE ========*/
+
+*,
+::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-size: var(--body-font);
+    font-weight: var(--normal-font-size);
+    color: var(--dark-colour);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-colour);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*======= CLASS CSS ========*/
+
+.section {
+    padding: 5rem 0 2rem;
+}
+
+.section-title {
+    position: relative;
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-4);
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 56px;
+    height: .18rem;
+    top: -1rem;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: var(--dark-colour);
+}
+
+
+/*======= LAYOUT ========*/
+
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 2rem;
+    width: cal(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+}
+
+.l-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--dark-color-lighten);
+}
+
+
+/*======= NAV ========*/
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .nav_menu {
+        position: fixed;
+        top: var(--header-height);
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        padding: 2rem;
+        background-color: var(--white-color);
+        transition: .5s;
+    }
+}
+
+.nav_item {
+    margin-bottom: var(--mb-4);
+}
+
+.nav_logo {
+    font-weight: var(--font-semi-bold);
+}
+
+.nav_toggle,
+.nav_shop {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
+/*======= show menu ========*/
+
+.show {
+    left: 0;
+}
+
+
+/*Active Link*/
+
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    left: 45%;
+    bottom: -.5rem;
+    width: 4px;
+    height: 4px;
+    background-color: var(--dark-colour);
+    border-radius: 50%;
+}
+
+
+/*Change color header*/
+
+.scroll-header {
+    background-color: var(--white-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+
+/*========HOME============*/
+
+.home {
+    background-color: var(--dark-color-lighten);
+    overflow: hidden;
+}
+
+.home_container {
+    height: calc(100vh - var(--header-height));
+}
+
+.home_sneaker {
+    position: relative;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.home_shape {
+    width: 220px;
+    height: 220px;
+    background-color: var(--dark-colour);
+    border-radius: 50%;
+}
+
+.home_img {
+    position: absolute;
+    top: 1.5rem;
+    max-width: initial;
+    width: 275px;
+    transform: var(--rotate-img);
+}
+
+.home_new {
+    display: block;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-2);
+}
+
+.home_title {
+    font-size: var(--bigger-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.home_description {
+    margin-bottom: var(--mb-6);
+}
+
+
+/*BUTTONS*/
+
+.button {
+    display: inline-block;
+    background-color: var(--dark-colour);
+    color: var(--white-color);
+    padding: 1.12rem 2rem;
+    font-weight: var(--font-medium);
+    border-radius: .5rem;
+    transition: .3s;
+}
+
+.button:hover {
+    transform: translateY(-.25rem);
+}
+
+.button_light {
+    display: inline-flex;
+    color: var(--dark-colour);
+    font-weight: var(--font-bold);
+    align-items: center;
+}
+
+.button_icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-1);
+    transition: .3s;
+}
+
+.button_light:hover .button_icon {
+    transform: translateX(.25rem);
+}
+
+
+/*========= FEATURED  ===========*/
+
+.featured_container {
+    row-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, mininax(220px, 1fr));
+}
+
+.sneaker {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--dark-color-lighten);
+    border-radius: .5rem;
+    transition: .3s;
+}
+
+.sneaker_sale {
+    position: absolute;
+    left: .5rem;
+    background-color: var(--dark-colour);
+    color: var(--white-color);
+    padding: .25rem.5rem;
+    border-radius: .25rem;
+    font-size: var(--h2-font-size);
+    transform: rotate(-90deg);
+    letter-spacing: .1rem;
+}
+
+.sneaker_img {
+    width: 220px;
+    margin-top: var(--mb-3);
+    margin-bottom: var(--mb-6);
+    transform: var(--rotate-img);
+    filter: drop-shadow(0 12px 8px rgba(0, 0, 0, .2));
+}
+
+.sneaker_name,
+.sneaker_price {
+    font-size: var(--h2-font-size);
+    letter-spacing: .1rem;
+    font-weight: var(--font-bold);
+}
+
+.sneaker_name {
+    margin-bottom: var(--mb-1);
+}
+
+.sneaker:hover {
+    transform: translateY(-.5rem);
+}
+
+
+/*========= COLLECTION ===========*/
+.collection_container {
+    row-gap: 2rem;
+    justify-content: center;
+}
+
+.collection_card {
+    position: relative;
+    display: flex;
+    height: 238px;
+    background-color: var(--dark-color-lighten);
+    padding: 2rem;
+    border-radius: .5rem;
+    transition: .3s;
+
+}
+
+.collection_data{
+     align-self: flex-end;
+}
+
+.collection_img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 230px;
+}
+
+  .collection_name {
+      font-size: var(--bigger-font-size);
+  }
+
+  .collection_description {
+      margin-bottom: var(--mb-2);
+  }
+
+  .collection_card:hover {
+      transform: translateY(-.5rem);
+  }
+/*========= WOMEN SNEAKERS  ===========*/
+ .women__container {
+     row-gap: 2rem;
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ }
+
+/*========= OFFER  ===========*/
+  .offer_container {
+      grid-template-columns: 55% 45%;
+      column-gap: .25rem;
+  }
+
+  .offer_description {
+       column-gap: 0;
+       background-color: var(--dark-color-lighten);
+       border-radius: .5rem;
+       justify-content: center;
+  }
+
+  .offer__data {
+      padding: 4rem 0 4rem 1.5rem;
+  }
+
+  .offer__title {
+      font-size: var(--biggest-font-size);
+      margin-bottom: .25rem;
+  }
+   .offer__description{
+       margin-bottom: var(--mb-3);
+   }
+
+   .offer__img {
+       width: 153px;
+   }
+/*========= NEW COLLECTION  ===========*/
+.new__container {
+    row-gap: 2rem;
+
+}
+
+.new__mens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--dark-color-lighten);
+    border-radius: .5rem;
+    padding: 2rem;
+
+}
+
+.new__mens-img{
+     width: 276px;
+     margin-bottom: var(--mb-3);
+
+}
+.new__title {
+    font-size: var(--bigger-font-size);
+    margin-bottom: .25rem;
+}
+
+.new__perci {
+    display: block;
+    margin-bottom: var(--mb-3);
+}
+
+.new__sneaker {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.new__sneaker-card {
+    position: relative;
+    padding: 3.5rem 1.5rem;
+    background-color: var(--dark-color-lighten);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.new__sneaker-img {
+    width: 220px;
+}
+
+.new__sneaker-overlay {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(138, 138, 138, .3);
+    transition: .3s;
+}
+
+.new__sneaker-card:hover  .new__sneaker-overlay{
+  bottom: 0;
+}
+/*========= NEWSLETTER ===========*/
+
+.newsletter__container {
+    background-color: var(--dark-colour);
+    color: var(--white-color);
+    padding: 2rem .5rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.newsletter__title {
+    font-size: var(--bigger-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+.newsletter__description {
+    margin-bottom: var(--mb-5);
+}
+
+.newsletter__subscribe {
+    display: flex;
+    column-gap: .5rem;
+    background-color: var(--white-color);
+    padding: .5rem;
+    
+} 
+
+.newsletter__input  {
+    outline: none;
+    border: none;
+    width: 90%;
+    font-size: var(--normal-font-size);
+}
+
+.newsletter::placeholder {
+    color: var(--dark-colour);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+/*========= FOOTER  ===========*/
+.footer__container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.footer__box {margin-bottom: var(--mb-4);}
+.footer__title {
+    font-size: var(--big-font-size);
+
+}
+
+.footer__link{
+  display: block;
+  width: max-content;
+  margin-bottom: var(--mb-1);
+}
+
+.footer__social {
+    font-size: 1.5rem;
+    margin-right: 1.25rem;
+}
+
+.footer__copy {
+    padding-top: 3rem;
+    font-size: var(--smaller-font-size);
+    color: var(--dark-color-light);
+    text-align: center;
+}
