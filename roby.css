@@ -33,7 +33,7 @@
     /*======= Z - INDEX ========*/
     --z-fixed: 100;
     /*======= ROTATE IMG ========*/
-    --rotate-img: rotate(-30deg);
+    --rotate-img: rotate(-27deg);
 }
 
 @media screen and (min-width: 768px) {
@@ -230,17 +230,18 @@ img {
 }
 
 .home_shape {
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
     background-color: var(--dark-colour);
     border-radius: 50%;
 }
 
 .home_img {
     position: absolute;
-    top: 1.5rem;
+    top: 0.5rem;
     max-width: initial;
     width: 275px;
+    left: .01rem;
     transform: var(--rotate-img);
 }
 
@@ -348,6 +349,18 @@ img {
     transform: translateY(-.5rem);
 }
 
+.sneaker__pages{
+    margin-top: var(--mb-6);
+}
+.sneaker__pag{
+   padding: .5rem 1rem;
+   border: 1px solid var(--dark-colour);
+}
+
+.sneaker__pag:hover{
+    background-color: var(--dark-colour);
+    color: var(--dark-color-lighten);
+}
 
 /*========= COLLECTION ===========*/
 .collection_container {
@@ -370,7 +383,7 @@ img {
      align-self: flex-end;
 }
 
-.collection_img{
+.collection__img{
     position: absolute;
     top: 0;
     right: 0;
@@ -557,4 +570,58 @@ img {
     font-size: var(--smaller-font-size);
     color: var(--dark-color-light);
     text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    body{
+       margin: 0;
+    }
+    
+    .section{
+        padding: 7rem 0;
+    }
+
+    .section-title::after{
+        width: 76px;
+    }
+    .nav{
+        height: calc(var(--header-height) + 1.5rem);
+    }
+    .nav_menu{
+        margin-left: auto;
+
+    }
+
+    .nav_list{
+        display: flex;
+    }
+    .nav_item{
+        margin-left: var(--mb-5);
+        margin-bottom: 0;
+    }
+    .nav_toggle{
+        display: none;
+    }
+
+    .home_container{
+        height: 100vh;
+        grid-template-columns: max-content max-content;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home__sneaker{
+        order: 1;
+
+    }
+    .home__shape{
+        width: 400px;
+        height: 400px;
+
+    }
+    .home_img{
+        width: 250px;
+        top: 3.5rem;
+        right: 0;
+    }
 }
