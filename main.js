@@ -1,11 +1,11 @@
  /*=======  SHOW MENU ========*/
  const showMenu =(toggleId, navId)=>{
      const toggle = document.getElementById(toggleId),
-     nav = document.getElementById(navId)
-
+            nav = document.getElementById(navId)
+ 
      if(toggle && nav){
          toggle.addEventListener('click', ()=>{
-             nav.classList.toggle('show')
+             nav.classList.toggle('reveal')
          })
      }
  }
@@ -15,12 +15,12 @@
 
 
   /*======= REMOVE MENU ========*/
-       const navLink = document.querySelectorAll('.nav_link')
-        function actionLink(){
-            const navMenu = document.getElementById('nav-menu')
-            navMenu.classList.remove('show')
-        }
-        navLink.forEach(list => list.addEventListener('click', actionLink))
+  const navLink = document.querySelectorAll('.nav_link')
+  function actionLink(){
+      const navMenu = document.getElementById('nav-menu')
+      navMenu.classList.remove('reveal')
+  }
+  navLink.forEach(list => list.addEventListener('click', actionLink))
 
 
    /*======= SCROLL SECTION ACTIVE LINK ========*/

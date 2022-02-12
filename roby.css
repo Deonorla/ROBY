@@ -96,8 +96,13 @@ img {
 
 .section {
     padding: 5rem 0 2rem;
+  
 }
 
+.red{
+    max-width: 1024px;
+    margin: 0 auto;
+}
 .section-title {
     position: relative;
     font-size: var(--big-font-size);
@@ -122,11 +127,10 @@ img {
 /*======= LAYOUT ========*/
 
 .bd-grid {
-    max-width: 1024px;
     display: grid;
     grid-template-columns: 100%;
     column-gap: 2rem;
-    width: cal(100% - 2rem);
+    width: cal(100% - 2rem); 
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
 }
@@ -150,7 +154,7 @@ img {
     align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 560px) {
     .nav_menu {
         position: fixed;
         top: var(--header-height);
@@ -180,7 +184,7 @@ img {
 
 /*======= show menu ========*/
 
-.show {
+.reveal {
     left: 0;
 }
 
@@ -237,10 +241,11 @@ img {
 }
 
 .home_img {
-    position: absolute;
-    top: 0.5rem;
+    align-self: center;
+    position: relative;
+    top: 2.5rem;
     max-width: initial;
-    width: 275px;
+    width: 16.01rem;
     left: .01rem;
     transform: var(--rotate-img);
 }
@@ -300,7 +305,7 @@ img {
 
 .featured_container {
     row-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, mininax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .sneaker {
@@ -408,11 +413,24 @@ img {
  }
 
 /*========= OFFER  ===========*/
-  .offer_container {
-      grid-template-columns: 55% 45%;
-      column-gap: .25rem;
+
+  
+  .offer {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    
+     
   }
 
+.offer_container{
+    display: flex;
+    width: auto;
+    padding: 1rem;
+    background-color: var(--dark-color-lighten);
+    border-radius: .5rem;
+}
+  
   .offer_description {
        column-gap: 0;
        background-color: var(--dark-color-lighten);
@@ -422,6 +440,7 @@ img {
 
   .offer__data {
       padding: 4rem 0 4rem 1.5rem;
+      margin-right: 2rem;
   }
 
   .offer__title {
@@ -529,6 +548,7 @@ img {
     
 } 
 
+
 .newsletter__input  {
     outline: none;
     border: none;
@@ -572,7 +592,7 @@ img {
     text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 560px) {
     body{
        margin: 0;
     }
@@ -620,8 +640,31 @@ img {
 
     }
     .home_img{
-        width: 250px;
-        top: 3.5rem;
-        right: 0;
+        
+        width: 265px;
+        top: 2.5rem;
+        left: 0 ;
+        
+    }
+}
+@media screen and (max-width: 417px) {
+    .collection__img{
+        width: 12rem;
+    }
+    
+    .button1{
+        width: 5rem;
+        padding: 1rem 1.5rem;
+    }
+    .offer__img{
+        width: 6rem;
+    }
+}
+@media screen and (max-width: 380px) {
+    .collection__img{
+        position: relative;
+    }
+    .collection__img{
+        width: 7.5rem;
     }
 }
