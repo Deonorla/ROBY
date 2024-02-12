@@ -2,7 +2,7 @@
 
  Roby is a responsive ecommerce website for shoe products.
 
- Website: https://deonorla.github.io/ROBY/
+ url: https://deonorla.github.io/ROBY/
  
 ![screely-1645096766730](https://user-images.githubusercontent.com/91434033/154471203-3665cd14-ac3d-498d-9c66-13c0c05278df.png)
 
