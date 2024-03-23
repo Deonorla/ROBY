@@ -1,4 +1,4 @@
-# ROBY
+# ROBY- Ecommerce website
 
  Roby is a responsive ecommerce website for various shoe products.
 
